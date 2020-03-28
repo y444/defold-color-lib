@@ -29,3 +29,5 @@ Use the `add(new_color_name, new_color)` function, where `new_color_name` is a s
 `color.add("half_red","#ff000080") -- defines a new color called half-red`
 
 `go.set("#label", "color", color.half_red) -- sets label's color to the newly defined half-red color`
+
+Uses photos by [Mika Baumeister](https://unsplash.com/@mbaumi?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/s/photos/paint-container?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
