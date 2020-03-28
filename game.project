@@ -15,5 +15,5 @@ input_method = HiddenInputField
 title = color
 
 [library]
-include_dirs = modules
+include_dirs = color-lib
 
