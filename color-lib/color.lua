@@ -1,4 +1,4 @@
-color = {}
+local color = {}
 
 function color.is_valid(new_color)
 	if string.match(new_color, '#%x%x%x%x%x%x%x%x') == new_color then return true
