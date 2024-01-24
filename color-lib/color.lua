@@ -1,7 +1,9 @@
 local color = {}
 
 function color.is_valid(new_color)
-	if string.match(new_color, '#%x%x%x%x%x%x%x%x') == new_color then return true
+  if string.match(new_color, '#%x%x%x%x%x%x%x%x')
+  or string.match(new_color, '#%x%x%x%x%x%x')
+  then return true
 	else assert(nil, "Please pass the correct color format: '#00000000'")
 	end
 end
@@ -14,10 +16,11 @@ end
 
 function color.set(new_color)
 	if color.is_valid(new_color) then
-		local r = tonumber('0x' .. string.sub(new_color, 2,3), 16) / 255
-		local g = tonumber('0x' .. string.sub(new_color, 4,5), 16) / 255
-		local b = tonumber('0x' .. string.sub(new_color, 6,7), 16) / 255
-		local a = tonumber('0x' .. string.sub(new_color, 8,9), 16) / 255
+		local r = tonumber('0x' .. string.sub(new_color, 2, 3), 16) / 255
+		local g = tonumber('0x' .. string.sub(new_color, 4, 5), 16) / 255
+		local b = tonumber('0x' .. string.sub(new_color, 6, 7), 16) / 255
+    local a = 1
+    if string.len(new_color) == 9 then a = tonumber('0x' .. string.sub(new_color, 8, 9), 16) / 255 end
 		return vmath.vector4(r, g, b, a)
 	end
 end

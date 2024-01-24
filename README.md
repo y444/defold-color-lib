@@ -8,7 +8,7 @@
 ## How to Use
 
 ### Set Color Properties in Hex
-Define hex colors using the `set(new_color)` function, where `new_color` is a string formatted as `#00000000`. The module will throw an error if the string is formatted incorrectly.
+Define hex colors using the `set(new_color)` function, where `new_color` is a string formatted as `#00000000` or `#000000`. If you choose the latter, the alpha channel will default to `FF` (fully opaque). The module will throw an error if the string is formatted incorrectly.
 
 *Example:* `go.set("#label", "color", color.set("#ff00ff80")) -- sets label's color to purple with 50% opacity`
 
